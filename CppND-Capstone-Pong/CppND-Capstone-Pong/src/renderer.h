@@ -13,7 +13,7 @@ class Renderer {
   ~Renderer();
 
   void Render(Ball &ball, Paddle &paddleOne, Paddle &paddleTwo);
-  void UpdateWindowTitle(int p1score, int p2score, int fps);
+  void UpdateWindowTitle(int p1score, int p2score, int fps, bool paused);
 
  private:
   SDL_Window *sdl_window;

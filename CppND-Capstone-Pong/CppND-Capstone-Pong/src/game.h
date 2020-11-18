@@ -8,6 +8,7 @@
 #include "renderer.h"
 #include "ball.h"
 #include "paddle.h"
+#include "collision.h"
 
 class Game {
  public:
@@ -31,8 +32,15 @@ class Game {
 
   int playerOneScore{0};
   int playerTwoScore{0};
+  
+  bool paused = true; //so the ball doesn't move unless the player provides input
 
   void Update(float dt);
+  void ResetBoard();
+  
+  Contact CheckPaddleCollision(Ball const& ball, Paddle const& paddle);
+  
+  Contact CheckWallCollision(Ball const& ball);
 };
 
 #endif

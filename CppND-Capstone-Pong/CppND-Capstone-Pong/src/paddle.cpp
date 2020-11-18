@@ -23,10 +23,10 @@ void Paddle::Update(float dt)
         {
           	if (direction[Direction::kUp])
             {
-              	velocity.y = -0.5f;
+              	velocity.y = -1.0f;
             } else if (direction[Direction::kDown])
             {
-              	velocity.y = 0.5f;
+              	velocity.y = 1.0f;
             }
         } else {
           	velocity.y = 0.0f;

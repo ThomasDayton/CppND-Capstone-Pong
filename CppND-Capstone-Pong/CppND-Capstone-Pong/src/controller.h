@@ -5,7 +5,7 @@
 
 class Controller {
  public:
-  void HandleInput(bool &running, Paddle &paddleOne, Paddle &paddleTwo) const;
+  void HandleInput(bool &running, bool &paused, Paddle &paddleOne, Paddle &paddleTwo) const;
 
  private:
   void ChangeDirection(Paddle &paddle, Paddle::Direction input) const;

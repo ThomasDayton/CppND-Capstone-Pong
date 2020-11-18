@@ -3,6 +3,7 @@
 
 CMakeFiles/PongGame.dir/src/ball.cpp.o: ../src/ball.cpp
 CMakeFiles/PongGame.dir/src/ball.cpp.o: ../src/ball.h
+CMakeFiles/PongGame.dir/src/ball.cpp.o: ../src/collision.h
 CMakeFiles/PongGame.dir/src/ball.cpp.o: ../src/vec2.h
 CMakeFiles/PongGame.dir/src/ball.cpp.o: /usr/include/SDL2/SDL.h
 CMakeFiles/PongGame.dir/src/ball.cpp.o: /usr/include/SDL2/SDL_assert.h
@@ -97,6 +98,7 @@ CMakeFiles/PongGame.dir/src/controller.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/PongGame.dir/src/controller.cpp.o: /usr/include/SDL2/close_code.h
 
 CMakeFiles/PongGame.dir/src/game.cpp.o: ../src/ball.h
+CMakeFiles/PongGame.dir/src/game.cpp.o: ../src/collision.h
 CMakeFiles/PongGame.dir/src/game.cpp.o: ../src/controller.h
 CMakeFiles/PongGame.dir/src/game.cpp.o: ../src/game.cpp
 CMakeFiles/PongGame.dir/src/game.cpp.o: ../src/game.h
@@ -148,6 +150,7 @@ CMakeFiles/PongGame.dir/src/game.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/PongGame.dir/src/game.cpp.o: /usr/include/SDL2/close_code.h
 
 CMakeFiles/PongGame.dir/src/main.cpp.o: ../src/ball.h
+CMakeFiles/PongGame.dir/src/main.cpp.o: ../src/collision.h
 CMakeFiles/PongGame.dir/src/main.cpp.o: ../src/controller.h
 CMakeFiles/PongGame.dir/src/main.cpp.o: ../src/game.h
 CMakeFiles/PongGame.dir/src/main.cpp.o: ../src/main.cpp
@@ -246,6 +249,7 @@ CMakeFiles/PongGame.dir/src/paddle.cpp.o: /usr/include/SDL2/begin_code.h
 CMakeFiles/PongGame.dir/src/paddle.cpp.o: /usr/include/SDL2/close_code.h
 
 CMakeFiles/PongGame.dir/src/renderer.cpp.o: ../src/ball.h
+CMakeFiles/PongGame.dir/src/renderer.cpp.o: ../src/collision.h
 CMakeFiles/PongGame.dir/src/renderer.cpp.o: ../src/paddle.h
 CMakeFiles/PongGame.dir/src/renderer.cpp.o: ../src/renderer.cpp
 CMakeFiles/PongGame.dir/src/renderer.cpp.o: ../src/renderer.h

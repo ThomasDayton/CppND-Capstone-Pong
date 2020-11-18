@@ -15,7 +15,7 @@ void Controller::StopMovement(Paddle &paddle, Paddle::Direction input) const {
   return;
 }
 
-void Controller::HandleInput(bool &running, Paddle &paddleOne, Paddle &paddleTwo) const {
+void Controller::HandleInput(bool &running, bool &paused, Paddle &paddleOne, Paddle &paddleTwo) const {
   SDL_Event e;
   while (SDL_PollEvent(&e)) {
     if (e.type == SDL_QUIT) {
@@ -24,34 +24,37 @@ void Controller::HandleInput(bool &running, Paddle &paddleOne, Paddle &paddleTwo
       switch (e.key.keysym.sym) {
         case SDLK_w:
           ChangeDirection(paddleOne, Paddle::Direction::kUp);
-          //break;
+          break;
 
         case SDLK_s:
           ChangeDirection(paddleOne, Paddle::Direction::kDown);
-          //break;
+          break;
 
         case SDLK_UP:
           ChangeDirection(paddleTwo, Paddle::Direction::kUp);
-          //break;
+          break;
 
         case SDLK_DOWN:
           ChangeDirection(paddleTwo, Paddle::Direction::kDown);
-          //break;
+          break;
       }
     } else if (e.type == SDL_KEYUP) {
       switch (e.key.keysym.sym) {
+        case SDLK_RETURN:
+          paused = false;
+          break;
         case SDLK_w:
           StopMovement(paddleOne, Paddle::Direction::kUp);
-          //break;
+          break;
         case SDLK_s:
           StopMovement(paddleOne, Paddle::Direction::kDown);
-          //break;
+          break;
         case SDLK_UP:
           StopMovement(paddleTwo, Paddle::Direction::kUp);
-          //break;
+          break;
         case SDLK_DOWN:
           StopMovement(paddleTwo, Paddle::Direction::kDown);
-          //break;
+          break;
       }
     }
   }

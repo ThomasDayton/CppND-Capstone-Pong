@@ -73,7 +73,14 @@ void Renderer::Render(Ball &ball, Paddle &paddleOne, Paddle &paddleTwo) {
   SDL_RenderPresent(sdl_renderer);
 }
 
-void Renderer::UpdateWindowTitle(int p1score, int p2score, int fps) {
-  std::string title{"Snake P1 Score: " + std::to_string(p1score) + " P2 Score: " + std::to_string(p2score) + " FPS: " + std::to_string(fps)};
+void Renderer::UpdateWindowTitle(int p1score, int p2score, int fps, bool paused) {
+  
+  std::string title;
+  if (paused)
+  {
+    title = "Pong (Press Enter) P1 Score: " + std::to_string(p1score) + " P2 Score: " + std::to_string(p2score) + " FPS: " + std::to_string(fps);
+  } else {
+  	title = "Pong P1 Score: " + std::to_string(p1score) + " P2 Score: " + std::to_string(p2score) + " FPS: " + std::to_string(fps);
+  }
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }
